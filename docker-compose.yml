@@ -45,14 +45,14 @@ services:
     healthcheck:
       test: "exit 0"
 
-  restaurant-app:
-    build: restaurant-springboot-mvc-test/
-    image: demo-restaurant-app
+  movie-app:
+    build: movie-app/
+    image: demo-movie-app
     restart: always
     network_mode: "host"
     hostname: localhost
     ports:
-      - 8080:8080
+      - 8081:8081
     depends_on:
       config-server:
         condition: service_healthy
