@@ -34,7 +34,7 @@ services:
         condition: service_healthy
       eureka-server:
         condition: service_healthy
-      restaurant-app:
+      movie-app:
         condition: service_healthy
     restart: always
     network_mode: "host"
