@@ -1,0 +1,14 @@
+#logging:
+ #file: logs/dev_app.log
+ #pattern:
+  # console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{40})
+   #  - %msg %n'
+   #file: '%d %-5level [%thread] %logger : %msg%n'
+ #level:
+ #  org.springframework.web: DEBUG
+  # org.hibernate: DEBUG
+   #com.stackroute.movieapp.controllers: DEBUG
+#spring:
+ #data:
+  # mongodb:
+   #  uri: mongodb://0.0.0.0:27000/test

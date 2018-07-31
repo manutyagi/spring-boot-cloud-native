@@ -4,19 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import com.stackroute.movieapp.domain.Movie;
-import com.stackroute.movieapp.exceptions.MovieAlreadyExistsException;
+import com.stackroute.movieapp.exception.MovieAlreadyExistsException;
+import com.stackroute.movieapp.exception.MovieNotFoundException;
 
 public interface MovieService {
-
-	public Movie saveMovie(Movie movie) throws MovieAlreadyExistsException;
-	
+	public Movie saveMovie(Movie movie) throws MovieAlreadyExistsException ;
 	public Iterable<Movie> getAllMovies();
-	
-	public Optional<Movie> getMovieById(int id);
-	
-	public void deleteMovie(int id);
-	
-//	public List<Movie> getMovieByTitle(String title);
-	
-	public Movie updateMovie(Movie movie, int id);
+	public boolean deleteMovie(int id) throws MovieNotFoundException;
+	public Movie updateMovie(Movie movie , int id) throws MovieNotFoundException;
+	public Optional<Movie> getMovieById(int id) throws MovieNotFoundException;
+//	public Movie getMovieByTitle(String title);
 }
